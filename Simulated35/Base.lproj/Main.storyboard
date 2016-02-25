@@ -22,9 +22,24 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ey4-3Y-bB7" customClass="DisplayView" customModule="Simulated35" customModuleProvider="target">
                                 <rect key="frame" x="20" y="20" width="560" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ER8-6c-Vm0">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="68"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Kus-UF-Ifs" kind="presentation" id="q3Z-fs-1jw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.10196078431372549" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ey4-3Y-bB7" secondAttribute="height" multiplier="165:20" id="01X-2i-mlH"/>
+                                    <constraint firstItem="ER8-6c-Vm0" firstAttribute="width" secondItem="ey4-3Y-bB7" secondAttribute="width" id="6ao-az-ZQT"/>
+                                    <constraint firstItem="ER8-6c-Vm0" firstAttribute="height" secondItem="ey4-3Y-bB7" secondAttribute="height" id="Vhe-Rd-IHL"/>
+                                    <constraint firstItem="ER8-6c-Vm0" firstAttribute="top" secondItem="ey4-3Y-bB7" secondAttribute="top" id="dHf-fa-d3s"/>
+                                    <constraint firstItem="ER8-6c-Vm0" firstAttribute="leading" secondItem="ey4-3Y-bB7" secondAttribute="leading" id="nEM-6c-Nie"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJh-j0-Y6h" userLabel="S b4 x^y">
@@ -461,5 +476,61 @@
             </objects>
             <point key="canvasLocation" x="635" y="676"/>
         </scene>
+        <!--Gaels View Controller-->
+        <scene sceneID="EEx-R2-WW1">
+            <objects>
+                <viewController id="Kus-UF-Ifs" customClass="GaelsViewController" customModule="Simulated35" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ut5-K2-4DH"/>
+                        <viewControllerLayoutGuide type="bottom" id="BeU-dt-baU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Qb-BO-9Go">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gaels_logo_944_625" translatesAutoresizingMaskIntoConstraints="NO" id="ArC-Po-LS4">
+                                <rect key="frame" x="150" y="201" width="300" height="198"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ArC-Po-LS4" secondAttribute="height" multiplier="944:625" id="jHh-Lr-scp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKD-eV-YAs">
+                                <rect key="frame" x="263" y="563" width="75" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LKD-eV-YAs" secondAttribute="height" multiplier="2:1" id="buQ-e4-WUC"/>
+                                </constraints>
+                                <state key="normal" title="DONE"/>
+                                <connections>
+                                    <segue destination="r8W-Kg-eZL" kind="unwind" unwindAction="unwindAcknowledgements:" id="xxs-4F-oih"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BeU-dt-baU" firstAttribute="top" secondItem="LKD-eV-YAs" secondAttribute="bottom" id="2ic-Tw-8vX"/>
+                            <constraint firstItem="LKD-eV-YAs" firstAttribute="width" secondItem="4Qb-BO-9Go" secondAttribute="width" multiplier="0.125" id="IiG-Sj-iM2"/>
+                            <constraint firstItem="ArC-Po-LS4" firstAttribute="width" secondItem="4Qb-BO-9Go" secondAttribute="width" multiplier="0.5" id="PFv-Sm-Nog"/>
+                            <constraint firstItem="ArC-Po-LS4" firstAttribute="centerY" secondItem="4Qb-BO-9Go" secondAttribute="centerY" id="PyZ-fH-a7f"/>
+                            <constraint firstItem="LKD-eV-YAs" firstAttribute="centerX" secondItem="4Qb-BO-9Go" secondAttribute="centerX" id="WpS-42-TyW"/>
+                            <constraint firstItem="ArC-Po-LS4" firstAttribute="centerX" secondItem="4Qb-BO-9Go" secondAttribute="centerX" id="dcv-P3-etI"/>
+                            <constraint firstItem="ArC-Po-LS4" firstAttribute="width" secondItem="4Qb-BO-9Go" secondAttribute="width" multiplier="0.5" id="mHJ-uU-oro"/>
+                            <constraint firstItem="ArC-Po-LS4" firstAttribute="height" secondItem="4Qb-BO-9Go" secondAttribute="height" multiplier="0.5" id="wHI-6F-Go4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PFv-Sm-Nog"/>
+                                <exclude reference="wHI-6F-Go4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCG-9S-A25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="r8W-Kg-eZL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="640" y="1400"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="gaels_logo_944_625" width="472" height="312"/>
+    </resources>
 </document>
